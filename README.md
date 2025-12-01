@@ -46,7 +46,7 @@ Desenvolver um programa em Python que funcione como um Assistente Virtual capaz 
 ## 🏗️ Estrutura do Código
 
 ### Arquitetura
-
+```
 projeto_assistente_virtual/
 │
 ├── backend/
@@ -56,7 +56,7 @@ projeto_assistente_virtual/
 │
 ├── README.md                   # Relatório/documentação completa
 └── instrucoes.txt              # Guia de instalação e execução
-
+```
 
 
 ### Principais Funções Python
