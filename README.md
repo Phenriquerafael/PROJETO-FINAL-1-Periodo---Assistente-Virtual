@@ -1,26 +1,27 @@
-# PROJETO-FINAL-1-Periodo 
+# PROJETO FINAL 1º Periodo - Assistente Virtual 
 
-# Assistente Virtual - Projeto Final
-
-## 📋 Informações do Projeto
+## 1. Informações do Projeto
 - **Disciplina:** Aplicações Informáticas B
 - **Ano Letivo:** 2025/2026
-- **Turma:** [Número da Turma]
-- **Colégio:** [Nome do Colégio]
-- **Grupo:** [Nomes dos Alunos]
+- **Colégio:** Externato Ribadouro
+- **Grupo:** 
+  - Gustavo Cardoso
+  - Francisco Midões
+  - Diogo Duarte
+  - Vicente Fernandes
 
-## 🎯 Objetivo do Projeto
+## 2. Objetivo do Projeto
 Desenvolver um programa em Python que funcione como um Assistente Virtual capaz de interagir com o utilizador, executar tarefas simples e apresentar respostas estruturadas, consolidando os conhecimentos fundamentais de programação adquiridos.
 
-## ⚙️ Funcionalidades Implementadas
+## 3. Funcionalidades Implementadas
 
-### 1. Operação Matemática Simples
+### 3.1. Operação Matemática Simples
 - **Descrição:** Permite realizar operações básicas (soma, subtração, multiplicação, divisão)
 - **Entradas:** Dois números fornecidos pelo utilizador
 - **Processamento:** Validação de entradas e cálculo conforme operação escolhida
 - **Saída:** Resultado da operação formatado
 
-### 2. Mini-Jogo "Adivinhar o Número"
+### 3.2. Mini-Jogo "Adivinhar o Número"
 - **Descrição:** Jogo interativo onde o utilizador tenta adivinhar um número aleatório
 - **Características:**
   - Número gerado aleatoriamente entre 1 e 20
@@ -28,7 +29,7 @@ Desenvolver um programa em Python que funcione como um Assistente Virtual capaz 
   - Dicas após cada tentativa ("muito alto" ou "muito baixo")
   - Mensagens de vitória/derrota
 
-### 3. Informações sobre o Assistente
+### 3.3. Informações sobre o Assistente
 - **Descrição:** Apresenta informações detalhadas sobre o projeto
 - **Conteúdo:**
   - Objetivos do projeto
@@ -36,14 +37,14 @@ Desenvolver um programa em Python que funcione como um Assistente Virtual capaz 
   - Funcionalidades disponíveis
   - Data de desenvolvimento
 
-### 4. Conversor de Unidades (Funcionalidade Extra)
+### 3.4. Conversor de Unidades (Funcionalidade Extra)
 - **Descrição:** Converte entre diferentes unidades de medida
 - **Tipos de conversão:**
   - Comprimento: cm ↔ m
   - Temperatura: °C ↔ °F
   - Peso: kg ↔ g
 
-## 🏗️ Estrutura do Código
+## 4. Estrutura do Código
 
 ### Arquitetura
 ```
@@ -65,7 +66,7 @@ projeto_assistente_virtual/
 4. `informacoes_assistente()` - Exibe informações do projeto
 5. `conversor_unidades()` - Realiza conversões de unidades
 
-## 🔧 Requisitos Técnicos Atendidos
+## 5. Requisitos Técnicos Atendidos
 
 ### ✅ Todos os requisitos foram implementados:
 - [x] Uso de variáveis e entrada/saída de dados
@@ -80,7 +81,7 @@ projeto_assistente_virtual/
 - Modularização do código Python
 - Sistema de menu interativo
 
-## 🚀 Como Executar o Projeto
+## 6. Como Executar o Projeto
 
 ```bash
 # Navegue até a pasta do projeto
@@ -90,7 +91,7 @@ cd projeto_assistente_virtual/backend
 python main.py
 ```
 
-## 🧠 Aprendizagem e Dificuldades
+## 7. Aprendizagem e Dificuldades
 
 ### Dificuldades Encontradas
 1. **Validação de entradas:** Garantir que o programa não crashasse com entradas inválidas
@@ -109,7 +110,7 @@ Aqui está o restante do README **completo, coerente e pronto para entrega** —
 
 ---
 
-## 📊 Critérios de Avaliação Atendidos
+## 8. Critérios de Avaliação Atendidos
 
 | Critério              | Implementação                                                 |
 | --------------------- | ------------------------------------------------------------- |
@@ -124,7 +125,7 @@ Aqui está o restante do README **completo, coerente e pronto para entrega** —
 
 ---
 
-## 👥 Trabalho Colaborativo
+## 9. Trabalho Colaborativo
 
 ### Divisão de Tarefas
 

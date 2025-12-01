@@ -1,108 +1,78 @@
-"""
-Módulo do Assistente Virtual
-Contém as funções principais do programa
-"""
-
-import random
-from datetime import date
-
-class AssistenteVirtual:
-    """Classe principal do Assistente Virtual"""
-    
-    def __init__(self, nome_utilizador=""):
-        self.nome_utilizador = nome_utilizador
-        self.grupo = {
-            "alunos": ["[Aluno 1]", "[Aluno 2]", "[Aluno 3]"],
-            "turma": "[Turma]",
-            "colegio": "[Colégio]",
-            "ano_letivo": "2025/2026"
-        }
-    
-    def exibir_informacoes_grupo(self):
-        """Exibe informações do grupo"""
-        info = f"""
-        ========================================
-        ASSISTENTE VIRTUAL - PROJETO FINAL
-        ========================================
-        Ano Letivo: {self.grupo['ano_letivo']}
-        Disciplina: Aplicações Informáticas B
-        Turma: {self.grupo['turma']}
-        Colégio: {self.grupo['colegio']}
-        ========================================
-        """
-        return info
-
-# Outras funções podem ser organizadas aqui de forma modular
-
-"""
-Módulo: assistente.py
-Contém as funcionalidades do Assistente Virtual
-"""
-
 import random
 from datetime import date
 
 def operacao_matematica():
+    print("\n--- Operação Matemática ---")
+
     try:
-        num1 = float(input("Digite o primeiro número: "))
-        num2 = float(input("Digite o segundo número: "))
+        n1 = float(input("Primeiro número: "))
+        n2 = float(input("Segundo número: "))
+    except:
+        print("Erro: tens de escrever números.")
+        return
 
-        print("\nOperações disponíveis:")
-        print("1. Soma (+)")
-        print("2. Subtração (-)")
-        print("3. Multiplicação (*)")
-        print("4. Divisão (/)")
+    print("\nEscolhe a operação:")
+    print("+  Soma")
+    print("-  Subtração")
+    print("*  Multiplicação")
+    print("/  Divisão")
 
-        operacao = input("\nEscolha a operação (+, -, *, /): ")
+    op = input("Operação: ")
 
-        if operacao == "+":
-            print(f"\nResultado: {num1 + num2}")
-        elif operacao == "-":
-            print(f"\nResultado: {num1 - num2}")
-        elif operacao == "*":
-            print(f"\nResultado: {num1 * num2}")
-        elif operacao == "/":
-            if num2 == 0:
-                print("\nErro: Divisão por zero!")
-            else:
-                print(f"\nResultado: {num1 / num2}")
+    if op == "+":
+        print("Resultado:", n1 + n2)
+    elif op == "-":
+        print("Resultado:", n1 - n2)
+    elif op == "*":
+        print("Resultado:", n1 * n2)
+    elif op == "/":
+        if n2 == 0:
+            print("Não dá para dividir por zero.")
         else:
-            print("\nOperação inválida!")
-    except ValueError:
-        print("\nErro: introduza números válidos.")
+            print("Resultado:", n1 / n2)
+    else:
+        print("Operação inválida.")
 
 def jogo_adivinha():
+    print("\n--- Adivinhar o Número ---")
     numero = random.randint(1, 20)
     tentativas = 5
 
-    print("\n--- Adivinhar o Número ---")
-    print("O computador escolheu um número entre 1 e 20.")
-
-    for tentativa in range(1, tentativas + 1):
+    for i in range(1, tentativas + 1):
         try:
-            palpite = int(input(f"Tentativa {tentativa}: "))
+            palpite = int(input("Tentativa " + str(i) + ": "))
+        except:
+            print("Escreve um número.")
+            continue
 
-            if palpite < numero:
-                print("Muito baixo!")
-            elif palpite > numero:
-                print("Muito alto!")
-            else:
-                print(f"\nAcertaste! O número era {numero}.")
-                return
-        except ValueError:
-            print("Insere um número válido.")
+        if palpite < numero:
+            print("Muito baixo.")
+        elif palpite > numero:
+            print("Muito alto.")
+        else:
+            print("Acertaste! O número era", numero)
+            return
 
-    print(f"\nFicaste sem tentativas. O número correto era {numero}.")
+    print("Ficaste sem tentativas. O número era", numero)
 
 def informacoes():
-    print("\n--- Informações sobre o Assistente ---")
-    print("Projeto Final AIB 2025/2026")
-    print("Criado por: [Nomes dos Alunos]")
+    print("\n--- Informações ---")
+    print("Projeto Final - Assistente Virtual")
+    print("Ano Letivo: 2025/2026")
+    print("Colégio: Externato Ribadouro")
+    print("Autores:")
+    print(" - Gustavo Cardoso")
+    print(" - Francisco Midões")
+    print(" - Diogo Duarte")
+    print(" - Vicente Fernandes")
+    print()
     print("Funcionalidades:")
-    print(" - Operações matemáticas")
-    print(" - Jogo do número")
-    print(" - Conversor de unidades")
-    print(f"Data atual: {date.today().strftime('%d/%m/%Y')}\n")
+    print("- Operações matemáticas")
+    print("- Jogo de adivinhar o número")
+    print("- Conversor de unidades")
+    print("Data:", date.today().strftime("%d/%m/%Y"))
+    print("---------------------------")
+    print()
 
 def conversor():
     print("\n--- Conversor de Unidades ---")
@@ -114,26 +84,23 @@ def conversor():
     print("6. g → kg")
 
     try:
-        opcao = int(input("Escolha a conversão: "))
-        valor = float(input("Valor a converter: "))
-
-        if opcao == 1:
-            r = valor / 100
-        elif opcao == 2:
-            r = valor * 100
-        elif opcao == 3:
-            r = (valor * 9/5) + 32
-        elif opcao == 4:
-            r = (valor - 32) * 5/9
-        elif opcao == 5:
-            r = valor * 1000
-        elif opcao == 6:
-            r = valor / 1000
-        else:
-            print("Opção inválida.")
-            return
-
-        print(f"Resultado: {r}")
-
-    except ValueError:
+        op = int(input("Escolha a opção: "))
+        valor = float(input("Valor: "))
+    except:
         print("Erro: valor inválido.")
+        return
+
+    if op == 1:
+        print("Resultado:", valor / 100)
+    elif op == 2:
+        print("Resultado:", valor * 100)
+    elif op == 3:
+        print("Resultado:", (valor * 9/5) + 32)
+    elif op == 4:
+        print("Resultado:", (valor - 32) * 5/9)
+    elif op == 5:
+        print("Resultado:", valor * 1000)
+    elif op == 6:
+        print("Resultado:", valor / 1000)
+    else:
+        print("Opção inválida.")
