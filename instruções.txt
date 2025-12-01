@@ -1,0 +1,8 @@
+INSTRUÇÕES DE INSTALAÇÃO E EXECUÇÃO
+
+1. Copiar caminho do projeto e Correr na linha de comandos cd {Caminho...}
+2. Certificar que o Python 3.x está instalado
+3. Executar:
+   python main.py
+4. Utilizar o menu para navegar entre funcionalidades
+
