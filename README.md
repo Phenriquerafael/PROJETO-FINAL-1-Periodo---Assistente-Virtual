@@ -51,9 +51,8 @@ projeto_assistente_virtual/
 │
 ├── backend/
 │   ├── main.py                 # Programa principal em Python
-│   ├── assistente.py           # Módulo com todas as funcionalidades
-│   └── requirements.txt        # Dependências (se necessário)
-│
+│   └──  assistente.py           # Módulo com todas as funcionalidades
+│   
 ├── README.md                   # Relatório/documentação completa
 └── instrucoes.txt              # Guia de instalação e execução
 ```
